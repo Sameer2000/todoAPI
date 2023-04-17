@@ -1,14 +1,4 @@
-import pg from "pg";
-
-const { Pool } = pg;
-
-const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "todoAPI",
-  password: "16122000",
-  port: 5432,
-});
+import { pool } from '../config/pg.js';
 
 const createTask = async (req, res) => {
   const { task, status } = req.body;
